@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.9-slim
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -8,9 +8,11 @@ RUN apt-get update && apt-get install -y \
 # Set up the working directory
 WORKDIR /workspace
 
+# Copy requirements file
+COPY requirements.txt .
+
 # Install Python dependencies
-COPY requirements.txt /tmp/
-RUN pip install --upgrade pip && pip install -r /tmp/requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Set up environment variables
 ENV PYTHONUNBUFFERED 1
