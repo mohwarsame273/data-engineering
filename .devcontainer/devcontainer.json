@@ -1,8 +1,6 @@
 {
-    "name": "Python Data Engineering Environment",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "name": "Data Engineering Development Container",
+    "dockerFile": "Dockerfile",
     "customizations": {
         "vscode": {
             "settings": {
@@ -26,6 +24,5 @@
         }
     },
     "forwardPorts": [8888],
-    "postCreateCommand": "pip3 install --user -r requirements.txt",
-    "remoteUser": "vscode"
+    "postCreateCommand": "pip3 install --user -r requirements.txt"
 }
