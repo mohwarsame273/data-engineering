@@ -1,14 +1,13 @@
 {
-    "name": "Data Engineering Dev Container",
-    "dockerFile": "Dockerfile",
-    "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash",
-      "python.defaultInterpreterPath": "/usr/local/bin/python"
-    },
-    "extensions": [
-      "ms-python.python",
-      "ms-toolsai.jupyter"
-    ],
-    "forwardPorts": [8888],
-    "postCreateCommand": "pip install --user -r requirements.txt"
-  }
+  "name": "Python 3 Data Science",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter"
+  ],
+  "forwardPorts": [8888],
+  "postCreateCommand": "echo 'Container is ready!'"
+}
